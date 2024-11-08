@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>AP News</title>
+    <title>National News</title>
     <style>
         * {
             margin: 0;
@@ -153,14 +153,14 @@
 <body>
     <header>
         <div class="container">
-            <h1>AP News</h1>
+            <h1>National News</h1>
             <nav>
                 <ul>
                     <li><a href="politcs.html">Politics</a></li>
                     <li><a href="bussinesnews.html">Business</a></li>
                     <li><a href="internationalnews.html">International</a></li>
                     <li><a href="sports.html">Sports</a></li>
-                    <li><a href="nationalnews.html">National</a></li>
+                    <li><a href="home.html">Home</a></li>
                     <li><a href="contacts.html">Contact</a></li>
                 </ul>
             </nav>
@@ -173,44 +173,45 @@
 
     <section class="hero">
         <div class="container">
-            <h2>Latest News in Andhra Pradesh</h2>
-            <p>Stay updated with the latest news from AP, covering politics, sports, and entertainment.</p>
+            <h2>Latest National News</h2>
+            <p>Get the most up-to-date news on politics, economy, and society from across the country.</p>
         </div>
     </section>
 
     <section class="news-grid container">
-        <!-- News Article 1 -->
+        <!-- National News Article 1 -->
         <article class="news-card">
-            <img src="https://tse3.mm.bing.net/th?id=OIP.02dEidB-0jW3iTG5MsbQzAHaEl&pid=Api&P=0&h=180" alt="AP Politics News">
-            <h3>AP Government Launches New Welfare Scheme for Farmers</h3>
-            <p>Andhra Pradesh Chief Minister Y.S. Jagan Mohan Reddy launched a new welfare scheme aimed at improving the livelihoods of farmers. The scheme includes financial aid and subsidies for irrigation equipment.</p>
-           
+            <img src="https://tse1.mm.bing.net/th?id=OIP.jIeG3OPa30e6xwf4dugGWgHaEv&pid=Api&P=0&h=180" alt="National Budget">
+            <h3>Government Unveils New National Budget</h3>
+            <p>The central government has released its national budget for the coming fiscal year, focusing on economic growth, infrastructure development, and healthcare reform.</p>
+          
         </article>
-        <!-- News Article 2 -->
+        <!-- National News Article 2 -->
         <article class="news-card">
-            <img src="https://tse4.mm.bing.net/th?id=OIP.jc-5QSz5FWnGH72Wx_OJIAHaDt&pid=Api&P=0&h=180" alt="Vizag IT Hub News">
-            <h3>Vizag to Become IT Hub of Andhra Pradesh</h3>
-            <p>The Andhra Pradesh government has announced plans to transform Visakhapatnam into a major IT hub. Several global companies have shown interest in setting up offices in the city, which is expected to generate thousands of jobs.</p>
-         
+            <img src="https://tse3.mm.bing.net/th?id=OIP.O7xchgfRGXK4O8oSO31pKwAAAA&pid=Api&P=0&h=180" alt="Election Results">
+            <h3>General Election Results: New Government Forms</h3>
+            <p>After months of campaigning, the general elections have concluded with the formation of a new government. Key policies and future directions are eagerly anticipated.</p>
+       
         </article>
-        <!-- News Article 3 -->
+        <!-- National News Article 3 -->
         <article class="news-card">
-            <img src="https://tse3.mm.bing.net/th?id=OIP.rU2AXyAgv0nfsuMQ3AWj3AAAAA&pid=Api&P=0&h=180" alt="Sports News">
-            <h3>AP Cricket Team Wins Domestic Championship</h3>
-            <p>Andhra Pradesh’s cricket team clinched the Domestic T20 Championship, defeating Tamil Nadu in a thrilling final. Captain V. Hanuma Vihari played a stellar role in leading the team to victory.</p>
+            <img src="https://tse2.mm.bing.net/th?id=OIP.khaos7Su3zdF9n_6hQCuLwHaEo&pid=Api&P=0&h=180" alt="Education Reform">
+            <h3>Major Education Reforms Announced</h3>
+            <p>The Ministry of Education has announced significant reforms aimed at improving the quality of education, including new curriculums and digital learning platforms.</p>
+
+        </article>
+        <!-- National News Article 4 -->
+        <article class="news-card">
+            <img src="https://tse2.mm.bing.net/th?id=OIP.qIvvOnwfn1SnPsyZajB7ggHaEA&pid=Api&P=0&h=180" alt="Economic Growth">
+            <h3>India’s Economy Shows Signs of Recovery</h3>
+            <p>Despite global challenges, India's economy is showing positive growth trends, with key sectors like IT, agriculture, and manufacturing performing well.</p>
         
-        </article>
-        <!-- News Article 4 -->
-        <article class="news-card">
-            <img src="https://tse2.mm.bing.net/th?id=OIP.B0QFlKA7lgLFy3BTuKN_sQHaEK&pid=Api&P=0&h=180" alt="Cyclone News">
-            <h3>Cyclone Alert: Coastal Andhra Prepares for Storm</h3>
-         
         </article>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 AP News. All Rights Reserved.</p>
+            <p>&copy; 2024 National News. All Rights Reserved.</p>
         </div>
     </footer>
 
@@ -220,17 +221,17 @@
             document.body.classList.toggle('dark-mode');
         }
 
-        // Function to filter articles based on the search input
+        // Function to filter categories based on the search input
         document.getElementById('search-input').addEventListener('input', function() {
             let query = this.value.toLowerCase();
-            let articles = document.querySelectorAll('.news-card');
+            let categories = document.querySelectorAll('.news-card');
 
-            articles.forEach(function(article) {
-                let title = article.querySelector('h3').textContent.toLowerCase();
+            categories.forEach(function(category) {
+                let title = category.querySelector('h3').textContent.toLowerCase();
                 if (title.includes(query)) {
-                    article.style.display = "block";
+                    category.style.display = "block";
                 } else {
-                    article.style.display = "none"; // Hide non-matching articles
+                    category.style.display = "none"; // Hide non-matching categories
                 }
             });
         });

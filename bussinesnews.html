@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>AP News</title>
+    <title>AP Business News</title>
     <style>
         * {
             margin: 0;
@@ -153,11 +153,11 @@
 <body>
     <header>
         <div class="container">
-            <h1>AP News</h1>
+            <h1>AP Business News</h1>
             <nav>
                 <ul>
                     <li><a href="politcs.html">Politics</a></li>
-                    <li><a href="bussinesnews.html">Business</a></li>
+                    <li><a href="home.html">Home</a></li>
                     <li><a href="internationalnews.html">International</a></li>
                     <li><a href="sports.html">Sports</a></li>
                     <li><a href="nationalnews.html">National</a></li>
@@ -173,44 +173,45 @@
 
     <section class="hero">
         <div class="container">
-            <h2>Latest News in Andhra Pradesh</h2>
-            <p>Stay updated with the latest news from AP, covering politics, sports, and entertainment.</p>
+            <h2>Latest Business Updates in Andhra Pradesh</h2>
+            <p>Stay informed about the latest business developments, investments, and startups in AP.</p>
         </div>
     </section>
 
     <section class="news-grid container">
-        <!-- News Article 1 -->
+        <!-- Business News Article 1 -->
         <article class="news-card">
-            <img src="https://tse3.mm.bing.net/th?id=OIP.02dEidB-0jW3iTG5MsbQzAHaEl&pid=Api&P=0&h=180" alt="AP Politics News">
-            <h3>AP Government Launches New Welfare Scheme for Farmers</h3>
-            <p>Andhra Pradesh Chief Minister Y.S. Jagan Mohan Reddy launched a new welfare scheme aimed at improving the livelihoods of farmers. The scheme includes financial aid and subsidies for irrigation equipment.</p>
+            <img src="https://tse4.mm.bing.net/th?id=OIP.XrsyCxCMTWQqmqAdI3uhowHaEo&pid=Api&P=0&h=180" alt="Startup Growth">
+            <h3>Vizag Emerges as a Startup Hub</h3>
+            <p>Visakhapatnam is becoming a major hub for startups, attracting entrepreneurs and investors. The city’s tech-friendly environment and government initiatives are fueling its growth in the startup ecosystem.</p>
+   
+        </article>
+        <!-- Business News Article 2 -->
+        <article class="news-card">
+            <img src="https://tse2.mm.bing.net/th?id=OIP.v7WPhsRuIev7ry86iTzzEwHaEd&pid=Api&P=0&h=180" alt="Investment">
+            <h3>AP Attracts $2 Billion in Foreign Investment</h3>
+            <p>Andhra Pradesh has attracted over $2 billion in foreign direct investment (FDI) in the last quarter, with major global companies investing in sectors like manufacturing, infrastructure, and technology.</p>
+            <a href="#" class="read-more">Read More</a>
+        </article>
+        <!-- Business News Article 3 -->
+        <article class="news-card">
+            <img src="https://tse4.mm.bing.net/th?id=OIP.R3WxL_b0VWgzaxqrkWlOYQE4DH&pid=Api&P=0&h=180" alt="Textile Industry">
+            <h3>Textile Industry Booms in Guntur</h3>
+            <p>The textile industry in Guntur is witnessing a significant boom, with local businesses expanding operations and increasing exports. The state government is also supporting the sector with various incentives.</p>
+
+        </article>
+        <!-- Business News Article 4 -->
+        <article class="news-card">
+            <img src="https://tse3.mm.bing.net/th?id=OIP.aFcPe1P0Ww2IAEqQJLHRzwAAAA&pid=Api&P=0&h=180" alt="Economy Growth">
+            <h3>Andhra Pradesh’s Economy Set for Double-Digit Growth</h3>
+            <p>Economists predict that Andhra Pradesh’s economy is on track to achieve double-digit growth in the next fiscal year, thanks to strong agricultural performance and rapid industrialization.</p>
            
-        </article>
-        <!-- News Article 2 -->
-        <article class="news-card">
-            <img src="https://tse4.mm.bing.net/th?id=OIP.jc-5QSz5FWnGH72Wx_OJIAHaDt&pid=Api&P=0&h=180" alt="Vizag IT Hub News">
-            <h3>Vizag to Become IT Hub of Andhra Pradesh</h3>
-            <p>The Andhra Pradesh government has announced plans to transform Visakhapatnam into a major IT hub. Several global companies have shown interest in setting up offices in the city, which is expected to generate thousands of jobs.</p>
-         
-        </article>
-        <!-- News Article 3 -->
-        <article class="news-card">
-            <img src="https://tse3.mm.bing.net/th?id=OIP.rU2AXyAgv0nfsuMQ3AWj3AAAAA&pid=Api&P=0&h=180" alt="Sports News">
-            <h3>AP Cricket Team Wins Domestic Championship</h3>
-            <p>Andhra Pradesh’s cricket team clinched the Domestic T20 Championship, defeating Tamil Nadu in a thrilling final. Captain V. Hanuma Vihari played a stellar role in leading the team to victory.</p>
-        
-        </article>
-        <!-- News Article 4 -->
-        <article class="news-card">
-            <img src="https://tse2.mm.bing.net/th?id=OIP.B0QFlKA7lgLFy3BTuKN_sQHaEK&pid=Api&P=0&h=180" alt="Cyclone News">
-            <h3>Cyclone Alert: Coastal Andhra Prepares for Storm</h3>
-         
         </article>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 AP News. All Rights Reserved.</p>
+            <p>&copy; 2024 AP Business News. All Rights Reserved.</p>
         </div>
     </footer>
 
@@ -220,17 +221,17 @@
             document.body.classList.toggle('dark-mode');
         }
 
-        // Function to filter articles based on the search input
+        // Function to filter categories based on the search input
         document.getElementById('search-input').addEventListener('input', function() {
             let query = this.value.toLowerCase();
-            let articles = document.querySelectorAll('.news-card');
+            let categories = document.querySelectorAll('.news-card'); // Corrected to use '.news-card'
 
-            articles.forEach(function(article) {
-                let title = article.querySelector('h3').textContent.toLowerCase();
+            categories.forEach(function(category) {
+                let title = category.querySelector('h3').textContent.toLowerCase();
                 if (title.includes(query)) {
-                    article.style.display = "block";
+                    category.style.display = "block";
                 } else {
-                    article.style.display = "none"; // Hide non-matching articles
+                    category.style.display = "none"; // Hide non-matching categories
                 }
             });
         });
